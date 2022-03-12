@@ -1,24 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
-
+import CardItem from './components/CardItem';
+import NavBar from './components/NavBar';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-sm-12">
+          <div className="card">
+            <div className="text-center">
+              <img src="./assets/images/cybersoft.png" alt="Card image" />
+            </div>
+            <div className="card-body">
+              <h4 className="card-title text-center">
+                CyberLearn - Học lập trình trực tuyến - Dự án thử đồ trực tuyến
+                - Virtual Dressing Room
+              </h4>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-8">
+          <NavBar></NavBar>
+          <CardItem></CardItem>
+        </div>
+        {/* <div className="col-md-4">
+          <div className="contain">
+            <div className="body" />
+            <div className="model" />
+            <div className="hairstyle" style={{ width: 1000, height: 1000, background: 'url("./assets/images/hairstyle/hairstyle3.png")', position: 'absolute', top: '-75%', right: '-57%', transform: 'scale(0.15)', zIndex: 4 }} />
+            <div className="necklace" style={{ width: 500, height: 1000, background: 'url("./assets/images/necklaces/necklace3.png")', position: 'absolute', bottom: '-40%', right: '-3.5%', transform: 'scale(0.5)', zIndex: 4 }} />
+            <div className="bikinitop" style={{ width: 500, height: 500, background: 'url("./assets/images/clothes/topcloth5.png")', position: 'absolute', top: '-9%', left: '-5%', zIndex: 3, transform: 'scale(0.5)' }} />
+            <div className="bikinibottom" style={{ width: 500, height: 1000, background: 'url("./assets/images/clothes/botcloth4.png")', position: 'absolute', top: '-30%', left: '-5%', zIndex: 2, transform: 'scale(0.5)' }} />
+            <div className="handbag" style={{ width: 500, height: 1000, background: 'url("./assets/images/handbags/handbag2.png")', position: 'absolute', bottom: '-40%', right: '-3.5%', transform: 'scale(0.5)', zIndex: 4 }} />
+            <div className="feet" style={{ width: 500, height: 1000, background: 'url("./assets/images/shoes/shoes2.png")', position: 'absolute', bottom: '-37%', right: '-3.5%', transform: 'scale(0.5)', zIndex: 1 }} />
+            <div className="background" style={{ backgroundImage: 'url("./assets/images/background/background1.jpg")' }} />
+          </div>
+        </div> */}
+      </div>
     </div>
+
   );
 }
 
