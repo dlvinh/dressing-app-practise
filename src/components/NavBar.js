@@ -6,11 +6,12 @@ export default function NavBar() {
     const { navPills } = useSelector(state => state.appStateReducer);
     /**
      * Use useEffect to add active class when initialise the component (entire page)
-     * useEffect replace didMount lifeCycle
+     * useEffect replace componentDidMount lifeCycle
      */
     useEffect(()=>{
+       // console.log("abc");
         document.querySelector(".nav-link").classList.add("active");
-    })
+    },[])
     // console.log("navPill",navPills)
     const renderNavbar = () => {
         return navPills.map((navItem, index) => {

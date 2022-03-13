@@ -6,14 +6,14 @@ const initial_model = {
     bikinitop:"",
     bikinibottom:"",
     handbag:"",
-    feet:"",
-    background:"",
+    feet:"./assets/images/shoes/shoes1.png",
+    background:"./assets/images/background/background1.jpg",
 }
 
 export const modelStateReducer = (state= initial_model, action)=>{
     switch(action.type){
         case TRY_TYPE:{
-            console.log(action.tabPane);
+           // console.log(action.tabPane);
             //let newModel = {...state};
             switch(action.tabPane.type){
                 case "topclothes": return {...state, bikinitop: action.tabPane.imgSrc_png};

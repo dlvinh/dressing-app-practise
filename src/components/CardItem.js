@@ -1,17 +1,27 @@
 import React from 'react'
 import { useSelector, useDispatch} from 'react-redux'
 import { tryClothAction } from '../Redux/actionList';
-
+import {useSpring} from 'react-spring';
 export default function CardItem() {
     const { tabPanes } = useSelector(state => state.appStateReducer);
     const dispatch = useDispatch();
+    // const springProps = useSpring({
+    //     from: {x:100, width: 80,
+    //         height: 80,backgroundColor: '#46e891'},
+    //     to: {x:140,width: 80,
+    //         height: 80,backgroundColor: "1000"},
+    //     config:{duration: 1500}
+    //   })
+      
+
+
     // console.log(tabPanes)
     const renderContent = (renderType) => {
         return tabPanes.map((tab, index) => {
             if (tab.type === renderType) {
                 return <div className="col-md-3" key={index}>
-                    <div className="card text-center">
-                        <img src={tab.imgSrc_jpg} alt="..." />
+                    <div  className="card text-center">
+                        <img  src={tab.imgSrc_jpg} alt="..." />
                         <h4><b>{tab.name}</b></h4>
                         <button className='btn btn-primary' onClick={()=>{
                             dispatch(tryClothAction(tab));
