@@ -1,9 +1,11 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch} from 'react-redux'
+import { tryClothAction } from '../Redux/actionList';
 
 export default function CardItem() {
     const { tabPanes } = useSelector(state => state.appStateReducer);
-    console.log(tabPanes)
+    const dispatch = useDispatch();
+    // console.log(tabPanes)
     const renderContent = (renderType) => {
         return tabPanes.map((tab, index) => {
             if (tab.type === renderType) {
@@ -11,12 +13,15 @@ export default function CardItem() {
                     <div className="card text-center">
                         <img src={tab.imgSrc_jpg} alt="..." />
                         <h4><b>{tab.name}</b></h4>
-                        <button>Thử đồ</button>
+                        <button className='btn btn-primary' onClick={()=>{
+                            dispatch(tryClothAction(tab));
+                        }}>Thử đồ</button>
                     </div>
                 </div>
             }
         })
     }
+    
     return (
         <React.Fragment>
             <div className="well">
