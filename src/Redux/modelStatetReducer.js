@@ -6,7 +6,7 @@ const initial_model = {
     bikinitop:"",
     bikinibottom:"",
     handbag:"",
-    feet:"./assets/images/shoes/shoes1.png",
+    feet:"../assets/images/shoes/shoes1.png",
     background:"./assets/images/background/background1.jpg",
 }
 

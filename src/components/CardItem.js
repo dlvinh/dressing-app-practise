@@ -21,9 +21,10 @@ export default function CardItem() {
             if (tab.type === renderType) {
                 return <div className="col-md-3" key={index}>
                     <div  className="card text-center">
-                        <img  src={tab.imgSrc_jpg} alt="..." />
+                        <img src={tab.imgSrc_jpg} alt="..." />
                         <h4><b>{tab.name}</b></h4>
-                        <button className='btn btn-primary' onClick={()=>{
+                        <button className='btn btn-primary' onClick={(event)=>{
+                            console.log(event.get)
                             dispatch(tryClothAction(tab));
                         }}>Thử đồ</button>
                     </div>
